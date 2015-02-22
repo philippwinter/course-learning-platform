@@ -1,5 +1,5 @@
 {
-  "name": "CourseLearningPlatform",
+  "name": "course-learning-platform",
   "version": "1.0.0",
   "description": "The course learning platform project.",
   "main": "index.js",
@@ -14,6 +14,11 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/philippwinter/course-learning-platform/issues"
+  },
+  "dependencies": {
+	  "consolidate": ">=0.11.0",
+	  "dustjs-linkedin": ">=2.5.1",
+	  "express": ">=4.11.2"
   },
   "homepage": "https://github.com/philippwinter/course-learning-platform"
 }
