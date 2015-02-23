@@ -1,0 +1,15 @@
+{
+	"title": "Credits",
+	"intro": "We would like to thank a lot of people, that helped to create our project or contributed beautiful libraries we could use!",
+	"usedLibs": [
+	             {
+	            	 "name": "Bootstrap", 
+	            	 "link": "http://getbootstrap.com", 
+	            	 "description": "This is an awesome layout and design framework, easening the creation of websites using a consistent layout."
+	             },
+	             {
+	            	 "name": "node.js", 
+	            	 "link": "http://nodejs.org"
+	             }
+	             ]
+}
