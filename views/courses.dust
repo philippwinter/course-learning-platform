@@ -11,6 +11,18 @@
 	        <h1>{site.title}</h1>
 	      </div>
 	      <p class="lead">{site.intro}</p>
+	      
+	      <ul class="list-group">
+
+			{#site.available}
+			
+			<li class="list-group-item">
+				<span class="badge">{badge}</span>{fancyName}: {shortDescription}
+			</li>
+			{~n}
+			{/site.available}
+		
+		  </ul>
 	    </div>
 		
 		{>"shared/footer"/}

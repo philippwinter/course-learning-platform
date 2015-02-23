@@ -6,6 +6,8 @@ var dust = require('dustjs-linkedin');
 var dust_helpers = require('dustjs-helpers');
 var cons = require('consolidate');
 
+var courses = require('./data/json/courses/courses.json');
+
 var data = setupData();
 var cachedData = [];
 
@@ -15,9 +17,10 @@ function setupData() {
 	d["general"] = require('./data/json/general.json');
 
 	// Data respective to each site
-	d["Home"] = require('./data/json/home.json');
-	d["Contact"] = require('./data/json/contact.json');
-	d["About"] = require('./data/json/about.json');
+	d["Courses"] = courses;
+	d["Home"] = require('./data/json/sites/home.json');
+	d["Contact"] = require('./data/json/sites/contact.json');
+	d["About"] = require('./data/json/sites/about.json');
 	
 	return d;
 }
@@ -71,9 +74,23 @@ app.all('/contact', function(req, res) {
 	res.render('contact.dust', getSiteData("Contact"));
 });
 
+app.all('/courses/', function(req, res) {
+	res.render('courses.dust', getSiteData("Courses"));
+});
+
+app.all('/course/:id', function(req, res) {
+	res.redirect('/course/' + req.params.id + '/view');
+});
+
+app.all('/course/:id/view', function(req, res) {
+	res.render('course_detail.dust', getCourseInformation(req.params.id));
+});
+
 app.listen(8888);
 
 console.log('Server started');
+console.log('Got following courses:');
+console.log(courses);
 console.log('Using views from the directory ' + app.get('views'));
-console.log('Got data to server:');
+console.log('Got data to serve:');
 console.log(data);
