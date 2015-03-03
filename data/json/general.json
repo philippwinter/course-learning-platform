@@ -1,7 +1,17 @@
 {
-	"nav": [
+	"nav": {
+		"all": [
 	               {"name": "Home", "link": "/home"},
 	               {"name": "About", "link": "/about"},
 	               {"name": "Contact", "link": "/contact"}
-	               ]
+	               ],
+	    "loggedIn": [
+	                 {"name": "Courses", "link": "/courses"},
+	                 {"name": "Logout", "link": "/logout"}
+	                 ],
+	    "notLoggedIn": [
+	                    {"name": "Login", "link": "/login"},
+	                    {"name": "Register", "link": "/register"}
+	                    ]
+	}
 }

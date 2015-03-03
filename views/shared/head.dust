@@ -5,13 +5,13 @@
 <meta name="author" content="">
 
 <!-- jQuery -->
-<script	src="public/js/jquery.min.js"></script>
+<script	src="/public/js/jquery.min.js"></script>
 <!-- /jQuery -->
 
 <!-- Bootstrap -->
-<link rel="stylesheet"	href="public/css/bootstrap.min.css">
-<link rel="stylesheet"	href="public/css/bootstrap-theme.min.css">
-<script	src="public/js/bootstrap.min.js"></script>
+<link rel="stylesheet"	href="/public/css/bootstrap.min.css">
+<link rel="stylesheet"	href="/public/css/bootstrap-theme.min.css">
+<script	src="/public/js/bootstrap.min.js"></script>
 <!-- /Bootstrap -->
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -20,6 +20,9 @@
 	      <script src="public/js/respond.min.js"></script>
 <![endif]-->
 
-<link rel="stylesheet" href="public/css/basic.css">
+<!-- Application script -->
+<script src="/public/js/app.js")></script>
+
+<link rel="stylesheet" href="/public/css/basic.css">
 
 <title>{site.title}</title>

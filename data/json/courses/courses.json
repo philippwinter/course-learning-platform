@@ -1,4 +1,6 @@
 {
+	"title": "Available Courses",
+	"intro": "The following courses are available now.",
 	"available": [
 	              	{
 	            	  "name": "parallel_programming",
