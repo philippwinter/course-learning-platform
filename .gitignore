@@ -26,3 +26,12 @@ node_modules
 
 # Users Environment Variables
 .lock-wscript
+
+# DB files
+data/db
+
+# Eclipse files
+.settings/
+
+# OS X finder settings file
+.DS_Store
