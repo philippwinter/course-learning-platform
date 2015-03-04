@@ -1,18 +1,39 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		{>"shared/head"/}
-	</head>
-	<body>
-		{>"shared/nav"/}
-		
-	    <div class="container">
-	      <div class="page-header">
-	        <h1>{site.title}</h1>
-	      </div>
-	      <p class="lead" id="intro">{site.intro}</p>
-	    </div>
-		
-		{>"shared/footer"/}
-	</body>
+<head>{>"shared/head"/}
+</head>
+<body>
+	{>"shared/nav"/}
+
+	<div class="container">
+		<div class="page-header">
+			<h1>{site.title}</h1>
+		</div>
+		<p class="lead" id="intro">{site.intro}</p>
+		<form id="contactForm">
+			<div class="alert alert-danger" id="errorBox" role="alert"></div>
+
+			<div class="form-group">
+				<label for="name">Username</label> <input id="name" name="name"
+					type="text" class="form-control" placeholder="Mr. Example" />
+			</div>
+			<div class="form-group">
+				<label for="email">Password</label> <input id="email" name="email"
+					type="email" class="form-control" placeholder="me@example.com" />
+			</div>
+			<div class="form-group">
+				<label for="message">Message</label>
+				<textarea id="message" name="message" type="text"
+					class="form-control" placeholder="Your text here" rows="5"></textarea>
+			</div>
+
+			<button type="submit" class="btn btn-primary" id="sendNow">Send</button>
+		</form>
+
+	</div>
+
+	<script type="text/javascript" src="/public/js/contact.js"></script>
+
+	{>"shared/footer"/}
+</body>
 </html>

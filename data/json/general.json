@@ -6,7 +6,7 @@
 	               {"name": "Contact", "link": "/contact"}
 	               ],
 	    "loggedIn": [
-	                 {"name": "Courses", "link": "/courses"},
+	                 {"name": "Courses", "link": "/course/list"},
 	                 {"name": "Logout", "link": "/logout"}
 	                 ],
 	    "notLoggedIn": [

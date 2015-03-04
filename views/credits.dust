@@ -1,28 +1,25 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		{>"shared/head"/}
-	</head>
-	<body>
-		{>"shared/nav"/}
-		
-	    <div class="container">
-	      <div class="page-header">
-	        <h1>{site.title}</h1>
-	      </div>
-	      <p class="lead" id="intro">{site.intro}</p>
-	      
-	      <div id="framework_info" class="list-group">
-	      {#site.usedLibs}
-			  <a href="{link}" class="list-group-item" target="_blank">
-			    <h4 class="list-group-item-heading">{name}</h4>
-			    <p class="list-group-item-text">{description}</p>
-			  </a>
-			  {~n}
-	      {/site.usedLibs}
-	      </div>
-	    </div>
-		
-		{>"shared/footer"/}
-	</body>
+<head>{>"shared/head"/}
+</head>
+<body>
+	{>"shared/nav"/}
+
+	<div class="container">
+		<div class="page-header">
+			<h1>{site.title}</h1>
+		</div>
+		<p class="lead" id="intro">{site.intro}</p>
+
+		<div id="framework_info" class="list-group">
+			{#site.usedLibs} <a href="{link}" class="list-group-item"
+				target="_blank">
+				<h4 class="list-group-item-heading">{name}</h4>
+				<p class="list-group-item-text">{description}</p>
+			</a> {~n} {/site.usedLibs}
+		</div>
+	</div>
+
+	{>"shared/footer"/}
+</body>
 </html>

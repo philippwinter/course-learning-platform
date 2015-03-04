@@ -5,13 +5,13 @@
 <meta name="author" content="">
 
 <!-- jQuery -->
-<script	src="/public/js/jquery.min.js"></script>
+<script src="/public/js/jquery.min.js"></script>
 <!-- /jQuery -->
 
 <!-- Bootstrap -->
-<link rel="stylesheet"	href="/public/css/bootstrap.min.css">
-<link rel="stylesheet"	href="/public/css/bootstrap-theme.min.css">
-<script	src="/public/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/public/css/bootstrap.min.css">
+<link rel="stylesheet" href="/public/css/bootstrap-theme.min.css">
+<script src="/public/js/bootstrap.min.js"></script>
 <!-- /Bootstrap -->
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->

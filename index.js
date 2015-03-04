@@ -16,14 +16,18 @@ var BASE_DIR = path.normalize(__dirname);
 var DATA_DIR = path.normalize(BASE_DIR + '/data/');
 var LIB_DIR = path.normalize(BASE_DIR + '/lib/');
 var VIEWS_DIR = path.normalize(BASE_DIR + '/views/');
-var DB_DIR = path.normalize(DATA_DIR + '/db/')
+var DB_DIR = path.normalize(DATA_DIR + '/db/');
+var ROUTES_DIR = path.normalize(BASE_DIR + '/routes/');
+var MODEL_DIR = path.normalize(LIB_DIR + '/model/');
 
 global.dirs = {
 	base: BASE_DIR,
 	data: DATA_DIR,
 	lib: LIB_DIR,
 	view: VIEWS_DIR,
-	db: DB_DIR
+	db: DB_DIR,
+	routes: ROUTES_DIR,
+	model: MODEL_DIR
 }
 
 /**
@@ -45,9 +49,11 @@ var cons = require('consolidate');
 global.db = {
 		'main': require(dirs.lib + 'db.js')
 };
-for(var i in db) {
-	db[i].init();
-}
+(function() {
+	for(var i in db) {
+		db[i].init();
+	}
+})();
 
 /**
  * Utils
@@ -63,11 +69,9 @@ app.use(cookieParser());
 app.use(sessionParser({secret: utils.hash("" + Math.random() * 10000)}));
 
 /**
- * Enable the security module
+ * Load the security module
  */
 var security = require(dirs.lib + 'security.js');
-global.security = security;
-console.log(security);
 
 app.set('views', dirs.view);
 app.engine('dust', cons.dust);
@@ -77,7 +81,6 @@ var errorHandling = require(dirs.lib + 'error_handling.js');
 
 console.log('Server started');
 
-//Not working yet, find workaround
 process.on('exit', function() {
 	console.log('Shutting down app now');
 });
