@@ -1,0 +1,7 @@
+{
+	"fancyName": "Parallel Programming",
+	"version": "0.1.0",
+	"shortDescription": "A course explaining the fundamentals of parallel programming.",
+	"badge": "new",
+	"routes": "parallel_programming.js"
+}

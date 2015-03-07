@@ -34,10 +34,11 @@ global.dirs = {
  * Basic libraries for our server;
  */
 var express = require('express');
-global.app = express();
+var app = express();
+global.app = app;
 
 /**
- * Template engine and supporting libs.
+ * Template engine and supporting libraries.
  */
 var dust = require('dustjs-linkedin');
 var dust_helpers = require('dustjs-helpers');
@@ -77,7 +78,7 @@ app.set('views', dirs.view);
 app.engine('dust', cons.dust);
 
 var main = require(dirs.lib + 'main.js');
-var errorHandling = require(dirs.lib + 'error_handling.js');
+//var errorHandling = require(dirs.lib + 'error_handling.js');
 
 console.log('Server started');
 
@@ -85,18 +86,18 @@ process.on('exit', function() {
 	console.log('Shutting down app now');
 });
 
-app.listen(port);
-
-console.log('-----------------------------')
-console.log('---- BEGIN LOG DUMPS NOW ----')
-console.log('-----------------------------')
-console.log(security.protectedArea);
-console.log('Using views from the directory ' + app.get('views'));
-//console.log('Got data to serve:');
-//console.log(data);
-console.log('Got following databases:');
-utils.listElementNames(db, '\t');
-console.log('-----------------------------')
-console.log('---- SUCCESSFULL STARTUP ----')
-console.log('----   RUNNING ON ' + port + '   ----')
-console.log('-----------------------------')
+setTimeout(function() {
+	app.listen(port);
+	
+	console.log('-----------------------------')
+	console.log('---- BEGIN LOG DUMPS NOW ----')
+	console.log('-----------------------------')
+	console.log(security.protectedArea);
+	console.log('Using views from the directory ' + app.get('views'));
+	console.log('Got following databases:');
+	utils.listElementNames(db, '\t');
+	console.log('-----------------------------')
+	console.log('---- SUCCESSFULL STARTUP ----')
+	console.log('----   RUNNING ON ' + port + '   ----')
+	console.log('-----------------------------')
+}, 0);

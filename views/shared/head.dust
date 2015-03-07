@@ -6,6 +6,7 @@
 
 <!-- jQuery -->
 <script src="/public/js/jquery.min.js"></script>
+<script src="/public/js/jquery-dateFormat.min.js"></script>
 <!-- /jQuery -->
 
 <!-- Bootstrap -->
@@ -21,7 +22,7 @@
 <![endif]-->
 
 <!-- Application script -->
-<script src="/public/js/app.js")></script>
+<script src="/public/js/app.js"></script>
 
 <link rel="stylesheet" href="/public/css/basic.css">
 

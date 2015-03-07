@@ -5,11 +5,13 @@
 var express = require('express');
 var data = require(dirs.lib + 'data.js');
 var security = require(dirs.lib + 'security.js');
-var bodyParser = require('body-parser');
 
 var mountpath = '/';
 
 var router = express.Router();
+
+var forLoggedUsers = security.protectedArea;
+var onlyUnloggedArea = security.onlyUnloggedArea;
 
 router.all('/', function(req, res) {
 	res.redirect(mountpath + 'home');
@@ -31,12 +33,18 @@ router.all('/credits', function(req, res) {
 	data.wrapAndRender('credits.dust', data.getSiteData("Credits"), req, res);
 });
 
-router.route('/register').get(
+router.route('/alreadyLoggedIn').all(forLoggedUsers).get(
+		function(req, res) {
+			data.wrapAndRender('alreadyLoggedIn.dust', data
+					.getSiteData("AlreadyLoggedIn"), req, res);
+		});
+
+router.route('/register').all(onlyUnloggedArea).get(
 		function(req, res) {
 			console.log('Getting the register page');
 			data.wrapAndRender('register.dust', data.getSiteData("Register"),
 					req, res);
-		}).post(bodyParser.json()).post(bodyParser.urlencoded()).post(
+		}).post(
 		function(req, res) {
 			console.log('Trying to register with following body:');
 			console.log(req.body);
@@ -78,15 +86,9 @@ router.route('/register').get(
 			res.send(response);
 		});
 
-router.route('/login').all(function(req, res, next) {
-	if (security.getCurrentUser(req) === null) {
-		next();
-	} else {
-		res.redirect('/home');
-	}
-}).get(function(req, res) {
+router.route('/login').all(onlyUnloggedArea).get(function(req, res) {
 	data.wrapAndRender('login.dust', data.getSiteData("Login"), req, res);
-}).post(bodyParser.json()).post(bodyParser.urlencoded()).post(
+}).post(
 		function(req, res) {
 			console.log('Trying to login with following body:');
 			console.log(req.body);
@@ -121,12 +123,17 @@ router.route('/login').all(function(req, res, next) {
 						};
 					}
 				}
+			} else {
+				response = {
+						status : "error",
+						cause : "Username or password not specified"
+				}
 			}
 
 			res.send(response);
 		});
 
-router.all('/logout', function(req, res) {
+router.all(onlyUnloggedArea).all('/logout', function(req, res) {
 	req.session.destroy();
 	res.redirect('/');
 });

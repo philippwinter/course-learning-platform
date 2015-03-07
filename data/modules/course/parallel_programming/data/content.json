@@ -1,0 +1,24 @@
+{
+	"title": "Parallel Programming - Overview",
+	"intro": "Explore the content of the parallel programming course now!",
+	"general": {
+		"title": "General",
+		"intro": "Answers the basic questions about parallel programming.",
+		"explore": "Learn now"
+	},
+	"usecases": {
+		"title": "Use cases",
+		"intro": "What are specific use cases of parallel programming?",
+		"explore": "Find out"
+	},
+	"scenarios": {
+		"title": "Problematic Scenarios",
+		"intro": "There are some scenarios, where parellelism can cause problems. We are teaching you, how to avoid them.",
+		"explore": "Go for it"
+	},
+	"implementation": {
+		"title": "Correct implementation",
+		"intro": "Having learned about those things, find out how to correctly implement them.",
+		"explore": "Yeah, I want to do some praxis!"
+	}
+}

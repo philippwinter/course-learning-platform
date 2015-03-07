@@ -21,7 +21,7 @@ $(document).ready(function(){
 				
 				setTimeout(function() {
 					window.location.href = '/';
-				}, 2000);
+				}, 500);
 			}else{
 				$('#errorBox').html(data.cause);
 				$('#errorBox').fadeIn();

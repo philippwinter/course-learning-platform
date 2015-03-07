@@ -1,0 +1,7 @@
+{
+	"title": "Available Courses",
+	"intro": "The following courses are available now.",
+	"available": [
+	              	"parallel_programming"
+	              ]
+}

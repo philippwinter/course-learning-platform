@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head>{>"shared/head"/}
+<head>
+	{>"shared/head"/}
 </head>
 <body>
 	{>"shared/nav"/}

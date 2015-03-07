@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>{>"shared/head"/}
+</head>
+<body>
+	{>"shared/nav"/}
+
+	<div class="container">
+		<div class="page-header">
+			<h1>{content.title}</h1>
+		</div>
+		<p class="lead" id="intro">{content.intro}</p>
+
+		<div class="row">
+			<div class="col-lg-6 course-content">
+				<h2>{content.general.title}</h2>
+				<p>{content.general.intro}</p>
+				<p>
+					<a class="btn btn-default" href="{paths.general}">{content.general.explore}&nbsp;»</a>
+				</p>
+			</div>
+			<div class="col-lg-6 course-content">
+				<h2>{content.usecases.title}</h2>
+				<p>{content.usecases.intro}</p>
+				<p>
+					<a class="btn btn-default" href="{paths.usecases}">{content.usecases.explore}&nbsp;»</a>
+				</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 course-content">
+				<h2>{content.scenarios.title}</h2>
+				<p>{content.scenarios.intro}</p>
+				<p>
+					<a class="btn btn-default" href="{paths.scenarios}">{content.scenarios.explore}&nbsp;»</a>
+				</p>
+			</div>
+			<div class="col-lg-6 course-content">
+				<h2>{content.implementation.title}</h2>
+				<p>{content.implementation.intro}</p>
+				<p>
+					<a class="btn btn-default" href="{paths.implementation}">{content.implementation.explore}&nbsp;»</a>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	{>"shared/footer"/}
+</body>
+</html>

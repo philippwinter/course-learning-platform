@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{>"shared/head"/}
+</head>
+<body>
+	{>"shared/nav"/}
+
+	<div class="container">
+		<div class="page-header">
+			<h1>{site.title}</h1>
+		</div>
+		<p class="lead" id="intro">{site.intro}</p>
+	</div>
+
+	{>"shared/footer"/}
+</body>
+</html>

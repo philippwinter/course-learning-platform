@@ -13,11 +13,10 @@
 
 		<ul class="list-group">
 
-			{#site.available}
-			<a href="/course/{name}/view" class="list-group-item"><span
-				class="badge">{badge}</span>{fancyName}: {shortDescription}</a> {~n}
-			{/site.available}
-
+			{#course_names}
+			<a href="/course/{name}/view" class="list-group-item">{loaded[name].info.fancyName}</a> {~n}
+			{/course_names}
+			
 		</ul>
 	</div>
 
