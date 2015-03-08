@@ -41,7 +41,6 @@ router.route('/alreadyLoggedIn').all(forLoggedUsers).get(
 
 router.route('/register').all(onlyUnloggedArea).get(
 		function(req, res) {
-			console.log('Getting the register page');
 			data.wrapAndRender('register.dust', data.getSiteData("Register"),
 					req, res);
 		}).post(
@@ -70,9 +69,6 @@ router.route('/register').all(onlyUnloggedArea).get(
 						status : "error",
 						cause : "Username not available"
 					};
-					console.log("Username " + req.body.username
-							+ " not available - got following resultSet:");
-					console.log(resultSet);
 				}
 
 			} else {
@@ -80,7 +76,6 @@ router.route('/register').all(onlyUnloggedArea).get(
 					status : "error",
 					cause : "Username or password is not specified"
 				};
-				console.log("Username or password hasn't been specified");
 			}
 
 			res.send(response);
@@ -88,50 +83,49 @@ router.route('/register').all(onlyUnloggedArea).get(
 
 router.route('/login').all(onlyUnloggedArea).get(function(req, res) {
 	data.wrapAndRender('login.dust', data.getSiteData("Login"), req, res);
-}).post(
-		function(req, res) {
-			console.log('Trying to login with following body:');
-			console.log(req.body);
-			var response = {};
+}).post(function(req, res) {
+	console.log('Trying to login with following body:');
+	console.log(req.body);
+	var response = {};
 
-			if (req.body.username && req.body.password) {
-				var users = entities.users;
-				var resultSet = users.find({
-					username : req.body.username
-				});
+	if (req.body.username && req.body.password) {
+		var users = entities.users;
+		var resultSet = users.find({
+			username : req.body.username
+		});
 
-				if (resultSet == undefined || resultSet.length == 0) {
-					response = {
-						status : "error",
-						cause : "Username not found"
-					};
-				} else {
-					var obj = resultSet[0];
-					if (obj.password === utils.hash(req.body.password)) {
-						response = {
-							status : "success",
-							username : obj.username
-						};
-						var uuid = security.addSession(obj);
-						req.session.uuid = uuid;
-						console.log("Saved session identifier " + uuid + ":");
-						console.log(req.session);
-					} else {
-						response = {
-							status : "error",
-							cause : "Password is wrong"
-						};
-					}
-				}
+		if (resultSet == undefined || resultSet.length == 0) {
+			response = {
+				status : "error",
+				cause : "Username not found"
+			};
+		} else {
+			var obj = resultSet[0];
+			if (obj.password === utils.hash(req.body.password)) {
+				response = {
+					status : "success",
+					username : obj.username
+				};
+				var uuid = security.addSession(obj);
+				req.session.uuid = uuid;
+				console.log("Saved session identifier " + uuid + ":");
+				console.log(req.session);
 			} else {
 				response = {
-						status : "error",
-						cause : "Username or password not specified"
-				}
+					status : "error",
+					cause : "Password is wrong"
+				};
 			}
+		}
+	} else {
+		response = {
+			status : "error",
+			cause : "Username or password not specified"
+		}
+	}
 
-			res.send(response);
-		});
+	res.send(response);
+});
 
 router.all(onlyUnloggedArea).all('/logout', function(req, res) {
 	req.session.destroy();
