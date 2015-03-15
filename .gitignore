@@ -28,7 +28,7 @@ node_modules
 .lock-wscript
 
 # DB files
-data/db
+data/db/*.json
 
 # Eclipse files
 .settings/

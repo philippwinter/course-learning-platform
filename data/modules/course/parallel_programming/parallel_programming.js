@@ -15,6 +15,8 @@ var data = require(dirs.lib + 'data.js');
 var renderInfo = 'parallel_programming';
 var utils = require(dirs.lib + 'utils.js');
 
+var contentRouter = require(__dirname + '/lib/content.js');
+
 var cachedCourseData = {};
 
 function courseData(name) {
@@ -76,5 +78,7 @@ router.route('/overview').all(function(req, res) {
 	siteData = utils.merge(siteData, data.wrapSiteData("Parallel Programming course - Overview"));
 	data.wrapAndRender('overview.dust', siteData, req, res, renderInfo);
 });
+
+router.use('/content', contentRouter);
 
 module.exports = router;
