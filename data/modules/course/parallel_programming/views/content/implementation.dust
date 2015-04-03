@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {>"shared/head"/}
+</head>
+<body>
+    {>"shared/nav"/}
+
+    <div class="container">
+        <div class="page-header">
+            <h1>{title}</h1>
+        </div>
+        <p class="lead" id="intro">{intro}</p>
+
+        {#sources}
+        <div id="identifier">
+            <p>{description}</p>
+
+            <pre class="custom-code">
+                <code class="{lang}">{fileContent}</code>
+            </pre>
+        </div>
+        {~n}
+        {/sources}
+
+        <p id="outro">{outro}</p>
+    </div>
+
+    {>"shared/footer"/}
+    
+    <link rel="stylesheet" href="/public/css/highlight_styles/ir_black.css">
+    <script src="/public/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

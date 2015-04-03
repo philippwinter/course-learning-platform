@@ -107,3 +107,11 @@
 .xml .hljs-cdata {
   opacity: 0.7;
 }
+
+/*
+    Own adaption to fit into bootstrap
+*/
+
+pre.custom-code {
+    background-color: #000 !important;
+}

@@ -1,0 +1,34 @@
+{
+    "title":  "Szenarien",
+    "intro": "Verschiedene Situationen, die es zu bedenken gibt",
+    "examples": [
+        {
+            "title": "Was ist ein Deadlock?",
+            "identifier": "deadlock",
+            "main": "Ein Deadlock entsteht, wenn zwei Prozesse sich 'verklemmen' indem sie auf das Freigeben bestimmter Ressourcen warten, die vom anderen zu diesem Zeitpunkt benutzt werden.",
+            "example": "Ein kleines Beispiel: Wir sind auf einem Parkplatz. Ein Auto steht auf einem Parkplatz und möchte rückwärts aus der Parklücke fahren. Hinter ihm steht jedoch schon ein weiteres Auto, dass in den dort freiwerdenden Parkplatz einfahren möchte. Also blockiert das wartende Auto das ausparkende Auto und das ausparkende Auto das Wartende.",
+            "outro": "Gibt's nich"
+        },
+        {
+            "title": "Was ist ein Livelock?",
+            "identifier": "lifelock",
+            "main": "Ähnlich wie beim Deadlock kommen wir nicht mehr zu unserem eigentlichen Ziel. Jedoch wird beim Livelock nicht in der 'Warteposititon' verharrt, sondern es findet ein stätiges wechseln der Zustände statt. ",
+            "example": "Jip's auch nisch",
+            "outro": "Nö"
+        },
+        {
+            "title": "Was ist eine Race Condititon?",
+            "identifier": "race_condition",
+            "main": "Eine Race Condititon entsteht, wenn zwei oder mehr Threads von zeitlichen ablaufen gegenseitig abhängig sind. Die Threads laufen ja nicht praktisch 100% parallel, sondern ihnen werden über verschiedene Schedular bestimmte Rechenzeiträume zugeteilt. Nun kann es sein, dass aber unser Thread1, der auf das Ergebnis von Thread2 angewiesen ist, zwei mal hintereinander zugeteilt wird, Thread2 dagegen noch nicht weiter laufen konnte. So kann es leicht zu Fehlern kommen.",
+            "example": "Wenn du ein Wettrennen gegen deine Mudda machst und sie an Start und Ziel gleichzeitig ist",
+            "outro": "Tschöö"
+        },
+        {
+            "title": "Was ist Synchronisation",
+            "identifier": "synchronization",
+            "main": "Synchronisation ist sozusagen die Lösung der Race Condition. Es ist Teil des zuvor schon angesprochenen Schedulars, nur dass die Synchronisation die Abhängigkeiten der verschiedene Prozesse voneinander beachtet um die effizienteste Zuteilung zu ermöglichen.",
+            "example": "",
+            "outro": ""
+        }
+    ]
+}

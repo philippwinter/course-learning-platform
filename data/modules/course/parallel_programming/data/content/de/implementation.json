@@ -1,0 +1,20 @@
+{
+    "title": "Implementation von Nebenläufigkeit",
+    "intro": "Thread und Runnable - So wird's in Java umgesetzt",
+    "main": "Wenn wir mit Threads arbeiten wollen, dann gibt es nur zwei Möglichkeiten. Die eine ist, die Klasse, die wir in einem Thread laufen lassen wollen eine Unterklasse von Thread zu machen. Die andere ist das Interface Runnable einzubinden. Im Endeffekt ist der Unterschied nicht wirklich groß jedoch ist das Arbeiten mit dem Interface insofern pracktischer, dass man die Klasse auch noch von einer anderen Klasse erben lassen kann. Hier zwei simple Klassen:",
+    "sources": [
+        {
+            "identifier": "source-ui",
+            "description": "Die UI mit der wir alle Threads steuern können",
+            "file": "sources/UI.java",
+            "lang": "java"
+        },
+        {
+            "identifier": "source-clone",
+            "description": "Die Klasse Clone in der wir festlegen, was der Thread überhaupt machen soll",
+            "file": "sources/Clone.java",
+            "lang": "java"
+        }
+    ],
+    "outro": "Wir trennen also unser kontrollierendes Programm von den vielen kleinen Unterprozessen. Dadurch können wir so viele parallele Unterprozesse laufen lassen wie wir wollen."
+}

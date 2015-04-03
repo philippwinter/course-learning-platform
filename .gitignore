@@ -35,3 +35,7 @@ data/db/*.json
 
 # OS X finder settings file
 .DS_Store
+
+# VisualStudio generated output
+bin
+obj

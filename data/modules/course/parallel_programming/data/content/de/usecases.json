@@ -1,0 +1,7 @@
+{
+    "title": "Anwendung",
+    "intro": "Wo wird das eingesetzt?",
+    "main": "Der Begriff 'Multi-Core' ist dir bestimmt schonmal zu Ohren gekommen. Wenn wir nur einen einzelnen Prozess hätte, wären diese völlig sinnlos.",
+    "example": "Ein Beispiel: Wir haben mehrere NPCs in einem Spiel und wollen, dass sie sich alle simultan bewegen können. Alleine das wir uns gleichzeitig mit den NPCs bewegen können, muss mit Threads realisiert werden.",
+    "outro": "Also wann auch immer wir wollen, dass etwas gleichzeitig (nebenläufig) passieren soll, haben wir es mit nebenläufiger Programmierung zu tun."
+}

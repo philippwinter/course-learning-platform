@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7d7b58b9-8162-4256-9fc6-9d068b963fd1}</ProjectGuid>
+    <ProjectHome />
+    <ProjectView>ShowAllFiles</ProjectView>
+    <StartupFile>index.js</StartupFile>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <ItemGroup>
+    <Content Include="data\modules\course\parallel_programming\data\content\sources\Clone.java" />
+    <Content Include="data\modules\course\parallel_programming\data\content\en\general.json" />
+    <Content Include="data\modules\course\parallel_programming\data\content\en\implementation.json" />
+    <Content Include="data\modules\course\parallel_programming\data\content\en\scenarios.json" />
+    <Content Include="data\modules\course\parallel_programming\data\content\en\usecases.json" />
+    <Content Include="data\modules\course\parallel_programming\data\content\sources\Ui.java" />
+    <Content Include="package.json" />
+    <Content Include="README.md" />
+    <Compile Include="index.js" />
+    <Content Include="data\general.json" />
+    <Compile Include="lib\data.js" />
+    <Compile Include="lib\db.js" />
+    <Compile Include="lib\error_handling.js" />
+    <Compile Include="lib\main.js" />
+    <Compile Include="lib\security.js" />
+    <Compile Include="lib\utils.js" />
+    <Compile Include="routes\course.js" />
+    <Compile Include="routes\top_level.js" />
+    <Compile Include="routes\user.js" />
+    <Content Include="views\about.dust" />
+    <Content Include="views\alreadyLoggedIn.dust" />
+    <Content Include="views\contact.dust" />
+    <Content Include="views\credits.dust" />
+    <Content Include="views\error.dust" />
+    <Content Include="views\home.dust" />
+    <Content Include="views\login.dust" />
+    <Content Include="views\register.dust" />
+    <Content Include="data\error\403.json" />
+    <Content Include="data\error\404.json" />
+    <Content Include="data\error\500.json" />
+    <Content Include="data\sites\about.json" />
+    <Content Include="data\sites\alreadyLoggedIn.json" />
+    <Content Include="data\sites\contact.json" />
+    <Content Include="data\sites\credits.json" />
+    <Content Include="data\sites\home.json" />
+    <Content Include="data\sites\login.json" />
+    <Content Include="data\sites\register.json" />
+    <Content Include="data\modules\course\list.json" />
+    <Content Include="data\modules\course\view.json" />
+    <Content Include="data\modules\user\list.json" />
+    <Content Include="data\modules\user\view.json" />
+    <Content Include="data\modules\course\parallel_programming\course.json" />
+    <Compile Include="data\modules\course\parallel_programming\parallel_programming.js" />
+    <Content Include="data\modules\course\parallel_programming\data\content.json" />
+    <Compile Include="data\modules\course\parallel_programming\lib\content.js" />
+    <Content Include="data\modules\course\parallel_programming\views\overview.dust" />
+    <Content Include="data\modules\course\parallel_programming\data\content\de\general.json" />
+    <Content Include="data\modules\course\parallel_programming\data\content\de\implementation.json" />
+    <Content Include="data\modules\course\parallel_programming\data\content\de\scenarios.json" />
+    <Content Include="data\modules\course\parallel_programming\data\content\de\usecases.json" />
+    <Content Include="data\modules\course\parallel_programming\views\content\general.dust" />
+    <Content Include="data\modules\course\parallel_programming\views\content\implementation.dust" />
+    <Content Include="data\modules\course\parallel_programming\views\content\scenarios.dust" />
+    <Content Include="data\modules\course\parallel_programming\views\content\usecases.dust" />
+    <Compile Include="lib\model\course.js" />
+    <Compile Include="lib\model\user.js" />
+    <Content Include="public\css\basic.css" />
+    <Content Include="public\css\bootstrap-theme.min.css" />
+    <Content Include="public\css\bootstrap.min.css" />
+    <Content Include="public\fonts\glyphicons-halflings-regular.svg" />
+    <Compile Include="public\js\app.js" />
+    <Compile Include="public\js\bootstrap.min.js" />
+    <Compile Include="public\js\contact.js" />
+    <Compile Include="public\js\highlight.pack.js" />
+    <Compile Include="public\js\html5shiv.min.js" />
+    <Compile Include="public\js\jquery-dateFormat.min.js" />
+    <Compile Include="public\js\jquery.min.js" />
+    <Compile Include="public\js\login.js" />
+    <Compile Include="public\js\register.js" />
+    <Compile Include="public\js\respond.min.js" />
+    <Content Include="public\css\highlight_styles\arta.css" />
+    <Content Include="public\css\highlight_styles\ascetic.css" />
+    <Content Include="public\css\highlight_styles\atelier-dune.dark.css" />
+    <Content Include="public\css\highlight_styles\atelier-dune.light.css" />
+    <Content Include="public\css\highlight_styles\atelier-forest.dark.css" />
+    <Content Include="public\css\highlight_styles\atelier-forest.light.css" />
+    <Content Include="public\css\highlight_styles\atelier-heath.dark.css" />
+    <Content Include="public\css\highlight_styles\atelier-heath.light.css" />
+    <Content Include="public\css\highlight_styles\atelier-lakeside.dark.css" />
+    <Content Include="public\css\highlight_styles\atelier-lakeside.light.css" />
+    <Content Include="public\css\highlight_styles\atelier-seaside.dark.css" />
+    <Content Include="public\css\highlight_styles\atelier-seaside.light.css" />
+    <Content Include="public\css\highlight_styles\brown_paper.css" />
+    <Content Include="public\css\highlight_styles\codepen-embed.css" />
+    <Content Include="public\css\highlight_styles\color-brewer.css" />
+    <Content Include="public\css\highlight_styles\dark.css" />
+    <Content Include="public\css\highlight_styles\default.css" />
+    <Content Include="public\css\highlight_styles\docco.css" />
+    <Content Include="public\css\highlight_styles\far.css" />
+    <Content Include="public\css\highlight_styles\foundation.css" />
+    <Content Include="public\css\highlight_styles\github.css" />
+    <Content Include="public\css\highlight_styles\googlecode.css" />
+    <Content Include="public\css\highlight_styles\hybrid.css" />
+    <Content Include="public\css\highlight_styles\idea.css" />
+    <Content Include="public\css\highlight_styles\ir_black.css" />
+    <Content Include="public\css\highlight_styles\kimbie.dark.css" />
+    <Content Include="public\css\highlight_styles\kimbie.light.css" />
+    <Content Include="public\css\highlight_styles\magula.css" />
+    <Content Include="public\css\highlight_styles\mono-blue.css" />
+    <Content Include="public\css\highlight_styles\monokai.css" />
+    <Content Include="public\css\highlight_styles\monokai_sublime.css" />
+    <Content Include="public\css\highlight_styles\obsidian.css" />
+    <Content Include="public\css\highlight_styles\paraiso.dark.css" />
+    <Content Include="public\css\highlight_styles\paraiso.light.css" />
+    <Content Include="public\css\highlight_styles\pojoaque.css" />
+    <Content Include="public\css\highlight_styles\railscasts.css" />
+    <Content Include="public\css\highlight_styles\rainbow.css" />
+    <Content Include="public\css\highlight_styles\school_book.css" />
+    <Content Include="public\css\highlight_styles\solarized_dark.css" />
+    <Content Include="public\css\highlight_styles\solarized_light.css" />
+    <Content Include="public\css\highlight_styles\sunburst.css" />
+    <Content Include="public\css\highlight_styles\tomorrow-night-blue.css" />
+    <Content Include="public\css\highlight_styles\tomorrow-night-bright.css" />
+    <Content Include="public\css\highlight_styles\tomorrow-night-eighties.css" />
+    <Content Include="public\css\highlight_styles\tomorrow-night.css" />
+    <Content Include="public\css\highlight_styles\tomorrow.css" />
+    <Content Include="public\css\highlight_styles\vs.css" />
+    <Content Include="public\css\highlight_styles\xcode.css" />
+    <Content Include="public\css\highlight_styles\zenburn.css" />
+    <Content Include="public\css\highlight_styles\brown_papersq.png" />
+    <Content Include="public\css\highlight_styles\school_book.png" />
+    <Content Include="public\css\highlight_styles\pojoaque.jpg" />
+    <Content Include="views\course\list.dust" />
+    <Content Include="views\course\view.dust" />
+    <Content Include="views\shared\footer.dust" />
+    <Content Include="views\shared\head.dust" />
+    <Content Include="views\shared\nav.dust" />
+    <Content Include="views\user\list.dust" />
+    <Content Include="views\user\view.dust" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="data" />
+    <Folder Include="data\db" />
+    <Folder Include="data\error" />
+    <Folder Include="data\modules" />
+    <Folder Include="data\modules\course" />
+    <Folder Include="data\modules\course\parallel_programming" />
+    <Folder Include="data\modules\course\parallel_programming\data" />
+    <Folder Include="data\modules\course\parallel_programming\data\content" />
+    <Folder Include="data\modules\course\parallel_programming\data\content\de\" />
+    <Folder Include="data\modules\course\parallel_programming\data\content\en\" />
+    <Folder Include="data\modules\course\parallel_programming\data\content\sources\" />
+    <Folder Include="data\modules\course\parallel_programming\lib" />
+    <Folder Include="data\modules\course\parallel_programming\views" />
+    <Folder Include="data\modules\course\parallel_programming\views\content" />
+    <Folder Include="data\modules\user" />
+    <Folder Include="data\sites" />
+    <Folder Include="lib" />
+    <Folder Include="lib\model" />
+    <Folder Include="licenses" />
+    <Folder Include="public" />
+    <Folder Include="public\css" />
+    <Folder Include="public\css\highlight_styles" />
+    <Folder Include="public\fonts" />
+    <Folder Include="public\js" />
+    <Folder Include="routes" />
+    <Folder Include="views" />
+    <Folder Include="views\course" />
+    <Folder Include="views\shared" />
+    <Folder Include="views\user" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

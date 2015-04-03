@@ -1,0 +1,6 @@
+{
+    "title": "Generell",
+    "intro": "Was ist Nebenl\u00E4ufigkeit?",
+    "main": "Die Nebenl\u00E4ufigkeit, auch Parallelit\u00E4t (englisch concurrency) genannt, ist in der Informatik die Eigenschaft eines Systems, mehrere Berechnungen, Anweisungen oder Befehle gleichzeitig ausf\u00FChren zu k\u00F6nnen.Es kann sich dabei um v\u00F6llig unabh\u00E4ngige Anweisungen handeln, bis hin zur gemeinsamen Bearbeitung einer Aufgabe.Sie k\u00F6nnen dabei auch miteinander interagieren (z. B. um Zwischenergebnisse auszutauschen).",
+    "outro": "Wir versuchen also unser Programm in viele kleine Abschnitte zu unterteilen, um sie parallel und damit effizienter ausf\u00FChren zu lassen."
+}
