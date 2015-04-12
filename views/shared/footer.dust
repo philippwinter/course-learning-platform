@@ -2,8 +2,7 @@
 	<div class="container">
 		<p class="text-muted">
 			A project made with <span class="glyphicon glyphicon-heart"
-				style="color: red"></span> by Jonas Heidecke, Lukas Struck & Philipp
-			Winter. - <a href="/credits">Credits</a>
+				style="color: red"></span> by Jonas Heidecke, Lukas Struck & Philipp Winter. - <a href="/credits">Credits</a>
 		</p>
 	</div>
 </footer>

@@ -140,6 +140,7 @@
     <Content Include="public\css\highlight_styles\pojoaque.jpg" />
     <Content Include="views\course\list.dust" />
     <Content Include="views\course\view.dust" />
+    <Content Include="views\shared\breadcrumb.dust" />
     <Content Include="views\shared\footer.dust" />
     <Content Include="views\shared\head.dust" />
     <Content Include="views\shared\nav.dust" />

@@ -55,6 +55,18 @@ var renderInfo = 'parallel_programming';
 
 var basicDataCached = {};
 
+var breadcrumbStuff = [
+    { tail:false, link: "/course", caption: "Courses" },
+    { tail:false, link: "/course/parallel_programming/view", caption: "Overview"}
+];
+
+var breadcrumbs = {
+    general: { breadcrumbs: [breadcrumbStuff[0], breadcrumbStuff[1], { tail: true, caption: "General" }] },
+    usecases: { breadcrumbs: [breadcrumbStuff[0], breadcrumbStuff[1], { tail: true, caption: "Usecases" }] },
+    scenarios: { breadcrumbs: [breadcrumbStuff[0], breadcrumbStuff[1], { tail: true, caption: "Scenarios" }] },
+    implementation: { breadcrumbs: [breadcrumbStuff[0], breadcrumbStuff[1], { tail:true, caption: "Implementation"}] }
+};
+
 router.use(isProtected);
 
 router.all('/', function(req, res) {
@@ -62,22 +74,22 @@ router.all('/', function(req, res) {
 });
 
 router.all('/general', function(req, res) {
-	var d = utils.merge(basicDataCached, sitesData.general);
+	var d = utils.merge(utils.merge(basicDataCached, sitesData.general), breadcrumbs.general);
 	data.wrapAndRender('content/general.dust', d, req, res, renderInfo);
 });
 
 router.all('/usecases', function(req, res) {
-	var d = utils.merge(basicDataCached, sitesData.usecases);
+	var d = utils.merge(utils.merge(basicDataCached, sitesData.usecases), breadcrumbs.usecases);
 	data.wrapAndRender('content/usecases.dust', d, req, res, renderInfo);
 });
 
 router.all('/scenarios', function(req, res) {
-	var d = utils.merge(basicDataCached, sitesData.scenarios);
+	var d = utils.merge(utils.merge(basicDataCached, sitesData.scenarios), breadcrumbs.scenarios);
 	data.wrapAndRender('content/scenarios.dust', d, req, res, renderInfo);
 });
 
 router.all('/implementation', function(req, res) {
-	var d = utils.merge(basicDataCached, sitesData.implementation);
+	var d = utils.merge(utils.merge(basicDataCached, sitesData.implementation), implementation);
 	data.wrapAndRender('content/implementation.dust', d, req, res, renderInfo);
 });
 

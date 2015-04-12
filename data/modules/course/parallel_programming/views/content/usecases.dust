@@ -7,12 +7,16 @@
     {>"shared/nav"/}
 
     <div class="container">
+        {>"shared/breadcrumb"/}
+
         <div class="page-header">
             <h1>{title}</h1>
         </div>
         <p class="lead" id="intro">{intro}</p>
 
         <p id="main">{main}</p>
+
+        <p id="example">{example}</p>
 
         <p id="outro">{outro}</p>
     </div>

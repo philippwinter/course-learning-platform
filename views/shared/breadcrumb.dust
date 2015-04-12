@@ -1,0 +1,9 @@
+﻿<ol class="breadcrumb">
+    {#breadcrumbs}
+        {#tail}
+            <li class="active">{caption}</li>
+        {:else}
+            <li><a href="{link}">{caption}</a></li>
+        {/tail}
+    {/breadcrumbs}
+</ol>
