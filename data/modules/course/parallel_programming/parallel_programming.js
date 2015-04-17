@@ -79,6 +79,22 @@ router.route('/overview').all(function(req, res) {
 	data.wrapAndRender('overview.dust', siteData, req, res, renderInfo);
 });
 
+router.route('/practice/').get(function (req, res) {
+    var siteData = utils.merge(basicDataCached, { content: courseData("practice") });
+    data.wrapAndRender('practice.dust', siteData, req, res, renderInfo);
+});
+
+router.route('/practice/data').get(function (req, res) {
+    res.sendFile(__dirname + '/data/practice.json');
+});
+
+router.route('/practice/results').post(function (req, res) {
+    console.log("not implemented yet");
+}).get(function (req, res) {
+    var siteData = {};
+    data.wrapAndRender('results.dust', siteData, req, res, renderInfo);
+});
+
 router.use('/content', contentRouter);
 
 module.exports = router;

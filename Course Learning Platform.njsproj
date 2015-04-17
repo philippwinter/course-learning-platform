@@ -16,12 +16,14 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
+    <Content Include="data\modules\course\parallel_programming\data\practice.json" />
     <Content Include="data\modules\course\parallel_programming\data\content\sources\Clone.java" />
     <Content Include="data\modules\course\parallel_programming\data\content\en\general.json" />
     <Content Include="data\modules\course\parallel_programming\data\content\en\implementation.json" />
     <Content Include="data\modules\course\parallel_programming\data\content\en\scenarios.json" />
     <Content Include="data\modules\course\parallel_programming\data\content\en\usecases.json" />
     <Content Include="data\modules\course\parallel_programming\data\content\sources\Ui.java" />
+    <Content Include="data\modules\course\parallel_programming\views\practice.dust" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Compile Include="index.js" />
@@ -32,6 +34,7 @@
     <Compile Include="lib\main.js" />
     <Compile Include="lib\security.js" />
     <Compile Include="lib\utils.js" />
+    <Compile Include="public\js\parallel_programming\practice.js" />
     <Compile Include="routes\course.js" />
     <Compile Include="routes\top_level.js" />
     <Compile Include="routes\user.js" />
@@ -172,6 +175,7 @@
     <Folder Include="public\css\highlight_styles" />
     <Folder Include="public\fonts" />
     <Folder Include="public\js" />
+    <Folder Include="public\js\parallel_programming\" />
     <Folder Include="routes" />
     <Folder Include="views" />
     <Folder Include="views\course" />

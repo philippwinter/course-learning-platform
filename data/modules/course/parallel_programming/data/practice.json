@@ -1,0 +1,64 @@
+﻿{
+    "siteTitle": "Abschlusstest",
+    "title": "Willkommen beim Abschlusstest",
+    "intro": "Bei diesem Abschlusstest soll das bisher gelernte Wissen ueberprueft werden",
+    "stages": [
+        {
+            "label": "Choose all presidents of the US",
+            "questions": [
+                {
+                    "label": "Obama",
+                    "valid": true
+                },
+                {
+                    "label": "Al Gore",
+                    "valid": false
+                },
+                {
+                    "label": "Bush sen.",
+                    "valid": true
+                },
+                {
+                    "label": "Bush jun.",
+                    "valid":  true
+                }
+            ]
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        },
+        {
+
+        }
+    ]
+}
