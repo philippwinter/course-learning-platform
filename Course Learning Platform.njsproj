@@ -24,6 +24,7 @@
     <Content Include="data\modules\course\parallel_programming\data\content\en\usecases.json" />
     <Content Include="data\modules\course\parallel_programming\data\content\sources\Ui.java" />
     <Content Include="data\modules\course\parallel_programming\views\practice.dust" />
+    <Content Include="data\modules\course\parallel_programming\views\results.dust" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Compile Include="index.js" />

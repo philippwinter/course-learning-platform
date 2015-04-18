@@ -4,61 +4,216 @@
     "intro": "Bei diesem Abschlusstest soll das bisher gelernte Wissen ueberprueft werden",
     "stages": [
         {
-            "label": "Choose all presidents of the US",
+            "label": "Was ist präemptives Multitasking?",
             "questions": [
                 {
-                    "label": "Obama",
+                    "label": "scheinbare Nebenläufigkeit",
                     "valid": true
                 },
                 {
-                    "label": "Al Gore",
+                    "label": "Das Anzeigen von zwei Programmen",
                     "valid": false
                 },
                 {
-                    "label": "Bush sen.",
+                    "label": "echte Nebenläufigkeit",
+                    "valid": false
+                },
+                {
+                    "label": "Ein Verfahren der Synchronisation",
+                    "valid": false
+                }
+            ]
+        },
+
+        {
+            "label": "Auf welchen Systemen können nebenläufige Prozesse realisiert werden?",
+            "questions": [
+                {
+                    "label": "Einkern-Prozessoren",
                     "valid": true
                 },
                 {
-                    "label": "Bush jun.",
-                    "valid":  true
+                    "label": "Mehrkern-Prozessoren",
+                    "valid": true
+                },
+                {
+                    "label": "Petri-Netze",
+                    "valid": true
+                },
+                {
+                    "label": "mehrere, über Netzwerk verbundene Computer",
+                    "valid": true
+                }
+            ]
+        },
+
+        {
+            "label": "Wie wird präemtives Multitasking realisiert?",
+            "questions": [
+                {
+                    "label": "Durch schnelles, abwechselndes Aktivieren der Prozesse",
+                    "valid": true
+                },
+                {
+                    "label": "Durch kleine grüne Männchen",
+                    "valid": false
+                },
+                {
+                    "label": "Durch mehrere Kerne, die die Prozesse gleichzeitig abarbeiten",
+                    "valid": false
+                },
+                {
+                    "label": "Über das Betriebssystem",
+                    "valid": true
                 }
             ]
         },
         {
-
+            "label": "Welche Technik wird in modernen Computern verwendet? (nur eines)",
+            "questions": [
+                {
+                    "label": "Präemtives MT",
+                    "valid": false
+                },
+                {
+                    "label": "Echtes MT",
+                    "valid": false
+                },
+                {
+                    "label": "Eine Kombination von beidem ",
+                    "valid": true
+                },
+                {
+                    "label": "Keins",
+                    "valid": false
+                }
+            ]
         },
         {
-
+            "label": "Welche Vorteile bietet MT gegenüber der Stapelverarbeitung?",
+            "questions": [
+                {
+                    "label": "Gleichmäßige Auslastung der Ressourcen",
+                    "valid": true
+                },
+                {
+                    "label": "Die Prozesse werden automatisch schneller",
+                    "valid": false
+                },
+                {
+                    "label": "weniger Verwaltungsaufwand",
+                    "valid": false
+                },
+                {
+                    "label": "Priorisierung von Aufgaben",
+                    "valid": true
+                }
+            ]
         },
         {
-
+            "label": "Welches Konstrukt realisiert Multitasking in Java?",
+            "questions": [
+                {
+                    "label": "Futures",
+                    "valid": false
+                },
+                {
+                    "label": "Schedules",
+                    "valid": false
+                },
+                {
+                    "label": "Objektorientierte Modellierung",
+                    "valid": false
+                },
+                {
+                    "label": "Threads",
+                    "valid": true
+                }
+            ]
         },
         {
-
+            "label": "Welche speziellen Möglichkeiten bieten die Java-Standartbibliotheken, MT zu implementieren?",
+            "questions": [
+                {
+                    "label": "Benutzen des Keywords 'concurrent'",
+                    "valid": false
+                },
+                {
+                    "label": "Java parallelisiert Code selbstständig",
+                    "valid": false
+                },
+                {
+                    "label": "Erben von der Klasse Thread",
+                    "valid": true
+                },
+                {
+                    "label": "Implementieren des Interfaces Runable",
+                    "valid": true
+                }
+            ]
         },
         {
-
+            "label": "Welche Probleme können bei MT auftreten?",
+            "questions": [
+                {
+                    "label": "Philosphenproblem",
+                    "valid": true
+                },
+                {
+                    "label": "Deadlock",
+                    "valid": true
+                },
+                {
+                    "label": "ungewolltes Verändern / Verfälschen von Daten wenn von zwei Prozessen gleichzeitig auf eine Ressource zugegriffen wird",
+                    "valid": true
+                },
+                {
+                    "label": "Raucherproblem",
+                    "valid": true
+                }
+            ]
         },
         {
-
+            "label": "Zwei Prozesse sind nebenläufig, wenn sie",
+            "questions": [
+                {
+                    "label": "sich nicht gegenseitig beeinflussen",
+                    "valid": false
+                },
+                {
+                    "label": "sich gegenseitig beeinflussen",
+                    "valid": false
+                },
+                {
+                    "label": "untereinander kommunizieren",
+                    "valid": false
+                },
+                {
+                    "label": "(quasi) gleichzeitig ablaufen",
+                    "valid": true
+                }
+            ]
         },
         {
-
-        },
-        {
-
-        },
-        {
-
-        },
-        {
-
-        },
-        {
-
-        },
-        {
-
+            "label": "Welche Lösungen gibt es für häufige Probleme bei MT?",
+            "questions": [
+                {
+                    "label": "Synchronisierung",
+                    "valid": true
+                },
+                {
+                    "label": "Warteschlangen",
+                    "valid": false
+                },
+                {
+                    "label": "Mutex",
+                    "valid": true
+                },
+                {
+                    "label": "Scheduling",
+                    "valid": false
+                }
+            ]
         }
     ]
 }

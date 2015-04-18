@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    {>"shared/head"/}
+</head>
+<body>
+    {>"shared/nav"/}
+
+    <div class="container">
+        <div class="page-header">
+            <h1>{siteTitle}</h1>
+        </div>
+        <p class="lead" id="intro">{siteIntro}</p>
+
+        <div id="results">
+
+        {#data}
+            <div id="results">
+                <h3>Test from <span class="dateTimeFormat">{time}</span></h3>
+
+                <div class="result">
+                    <span class="lead">You answered {correctAnswersCount} out of {totalAnswersCount} correct! That are {correctPercentage}%. {conclusion} <br /> If you're not happy, you can <a href="/course/parallel_programming/practice">try again!</a></span>
+                </div>
+            </div>
+        {/data}
+
+        </div>
+    </div>
+
+    {>"shared/footer"/}
+</body>
+</html>

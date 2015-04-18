@@ -11,6 +11,8 @@ var courses = require(dirs.model + 'course.js');
 var isProtected = security.protectedArea;
 var thisCourse = coursesLoaded.parallel_programming;
 
+var querystring = require('querystring');
+
 var data = require(dirs.lib + 'data.js');
 var renderInfo = 'parallel_programming';
 var utils = require(dirs.lib + 'utils.js');
@@ -90,9 +92,134 @@ router.route('/practice/data').get(function (req, res) {
 
 router.route('/practice/results').post(function (req, res) {
     console.log("not implemented yet");
+    console.log(req.body);
+    
+    var niceData = [];
+    for (var i = 0; i < req.body.answers.length; i++) {
+        var data = querystring.parse(req.body.answers[i]);
+        
+        console.log("got data for " + i + ":");
+        console.log(data);
+        niceData[i] = data;
+    }
+    
+    var currUser = security.getCurrentUser(req);
+    console.log("current user: ");
+    console.log(currUser);
+    
+    var dataForDb = {
+        course: 'parallel_programming',
+        answers: niceData,
+        username: currUser.username,
+        time: new Date()
+    };
+    
+    console.log("Crunched data:");
+    console.log(dataForDb);
+    
+    entities.practice.insert(dataForDb);
+    console.log("Finished saving");
+    
+    res.send({
+        status: 'Success'
+    }
+    );
 }).get(function (req, res) {
-    var siteData = {};
+    var currUser = security.getCurrentUser(req);
+    var results = entities.practice.find();
+    var siteData = {
+        siteTitle: 'Results',
+        siteIntro: 'The results of the parallel programming courses\' practice quiz.',
+        data: []
+    };
+    
+    var questions = courseData('practice');
+    
+    console.log(results);
+    
+    function handleResult(d) {
+        var correctCount = 0;
+        var totalCount = 0;
+        
+        console.log(d);
+                
+        for (var j = 0; j < questions.stages.length; j++) {
+            var e = d.answers[j];
+            var f = questions.stages[j].questions;
+            
+            if (!e || !f) {
+                console.log("Something bad happened at index " + j);
+                continue;
+            }
+            
+            for (var k = 0; k < f.length; k++) {
+                console.log(f[k]);
+                if (f[k].valid) {
+                    totalCount++; // Increase counter of total correct answers
+                }
+            }
+            
+            if (e.question1 && e.question1 === 'checked' && f[0].valid) {
+                correctCount++;
+            } else if (e.question1 && e.question1 !== 'checked' && !f[0].valid || e.question1 && e.question1 === 'checked' && f[0].valid) {
+                correctCount--;
+            }
+            
+            if (e.question2 === 'checked' && f[1].valid) {
+                correctCount++;
+            } else if (e.question2 && e.question2 !== 'checked' && !f[1].valid || e.question2 && e.question2 === 'checked' && f[1].valid) {
+                correctCount--;
+            }
+            
+            if (e.question3 === 'checked' && f[2].valid) {
+                correctCount++;
+            } else if (e.question3 && e.question3 !== 'checked' && !f[2].valid || e.question3 && e.question3 === 'checked' && f[2].valid) {
+                correctCount--;
+            }
+            
+            if (e.question4 && e.question4 === 'checked' && f[3].valid) {
+                correctCount++;
+            } else if (e.question4 && e.question4 !== 'checked' && !f[3].valid || e.question4 && e.question4 === 'checked' && f[3].valid) {
+                correctCount--;
+            }
+        }
+        
+        if (correctCount < 0) {
+            correctCount = 0;
+        }
+
+        var p = correctCount / totalCount * 100;
+        var c;
+        
+        if (p >= 95) {
+            c = 'Perfect!'
+        } else if (p >= 80) {
+            c = 'Pretty good!';
+        } else if (p >= 50) {
+            c = 'That\'s a good start :)';
+        } else {
+            c = 'Try to rewind that a little..';
+        }
+        
+        siteData.data.push({
+            correctAnswersCount: correctCount,
+            totalAnswersCount: totalCount,
+            correctPercentage: p,
+            conclusion: c,
+            time: new Date(d.time).getTime()
+        });
+
+    }
+    
+    for (var i in results) {
+        handleResult(results[i]);
+    }
+    
+    console.log("Final result data:");
+    console.log(siteData);
+
     data.wrapAndRender('results.dust', siteData, req, res, renderInfo);
+    //res.send(siteData);
 });
 
 router.use('/content', contentRouter);
