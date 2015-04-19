@@ -14,6 +14,8 @@
         </div>
         <p class="lead" id="intro">{intro}</p>
 
+        <p class="main">{main}</p>
+
         {#sources}
         <div class="source" id="{identifier}">
             <p>{description}</p>

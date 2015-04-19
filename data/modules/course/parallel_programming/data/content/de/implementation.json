@@ -1,20 +1,20 @@
 {
     "title": "Implementation von Nebenl\u00E4ufigkeit",
     "intro": "Thread und Runnable - So wird's in Java umgesetzt",
-    "main": "Wenn wir mit Threads arbeiten wollen, dann gibt es nur zwei M\u00F6glichkeiten. Die eine ist, die Klasse, die wir in einem Thread laufen lassen wollen eine Unterklasse von Thread zu machen. Die andere ist das Interface Runnable einzubinden. Im Endeffekt ist der Unterschied nicht wirklich gro\u00DF jedoch ist das Arbeiten mit dem Interface insofern pracktischer, dass man die Klasse auch noch von einer anderen Klasse erben lassen kann. Hier zwei simple Klassen:",
+    "main": "Wenn wir mit Threads arbeiten wollen, dann gibt es nur zwei M\u00F6glichkeiten. Die eine ist, die Klasse, die wir in einem Thread laufen lassen wollen eine Unterklasse von Thread zu machen. Die andere ist das Interface Runnable einzubinden. Im Endeffekt ist der Unterschied nicht wirklich gro\u00DF, jedoch ist das Arbeiten mit dem Interface insofern praktischer, als dass man die Klasse auch noch von einer anderen Klasse erben lassen kann. In anderen Sprachen gibt es noch andere Möglichkeiten, wir beschränken uns heir jedoch nur auf Java. Als Beispiel zeigen wir hier zwei Klassen, welche die Implementation einfacher Nebenlaeufigkeit erlaeutern.",
     "sources": [
         {
-            "identifier": "source-ui",
-            "description": "Die UI mit der wir alle Threads steuern k\u00F6nnen",
-            "file": "sources/UI.java",
+            "identifier": "source-clone",
+            "description": "In der Klasse Clone, welche das Interface Runnable implementiert wird der nebenläufige Prozess designt. Dazu wird der zu parallelisierende Code in die run-Methode geschrieben, welche bei jedem starten der Ausfuehrung in einem neuen Thread (engl. für \"(Handlungs)Strang\") aufgerufen wird.",
+            "file": "sources/Clone.java",
             "lang": "java"
         },
         {
-            "identifier": "source-clone",
-            "description": "Die Klasse Clone in der wir festlegen, was der Thread \u00FCberhaupt machen soll",
-            "file": "sources/Clone.java",
+            "identifier": "source-ui",
+            "description": "In der Klasse UI erstellen und starten wir schliesslich einige der soeben erstellten Klone. Diese laufen nun parallel zueinander und könnten somit etwa gleichzeitig agierende NPC's in einem Computerspiel simulieren.",
+            "file": "sources/UI.java",
             "lang": "java"
         }
     ],
-    "outro": "Wir trennen also unser kontrollierendes Programm von den vielen kleinen Unterprozessen. Dadurch k\u006Fnnen wir so viele parallele Unterprozesse laufen lassen wie wir wollen."
+    "outro": "Im Endeffekt teilen wir den abzuarbeitenden Code in kleine Haeppchen auf, welche auf sich allein gestellt Aufgaben erledigen und somit aktuelle Multi-Core Systeme besser auslasten koennen. Ausserdem fuehren wir hiermit eine weitere Abstraktionsebene in unser Programm ein, da sich ein in kleinere Stuecke zerlegtes Programm leichter warten laesst als ein monolithisches grosses."
 }

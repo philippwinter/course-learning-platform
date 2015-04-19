@@ -5,30 +5,44 @@
         {
             "title": "Was ist ein Deadlock?",
             "identifier": "deadlock",
-            "intro": "Ein Deadlock entsteht, wenn zwei Prozesse sich 'verklemmen' indem sie auf das Freigeben bestimmter Ressourcen warten, die vom anderen zu diesem Zeitpunkt benutzt werden.",
-            "main": "Ein kleines Beispiel: Wir sind auf einem Parkplatz. Ein Auto steht auf einem Parkplatz und m\u00F6chte r\u00FCckw\u00E4rts aus der Parkl\u00FCcke fahren. Hinter ihm steht jedoch schon ein weiteres Auto, dass in den dort freiwerdenden Parkplatz einfahren m\u00F6chte. Also blockiert das wartende Auto das ausparkende Auto und das ausparkende Auto das Wartende.",
+            "main": "Ein Deadlock entsteht, wenn zwei Prozesse sich 'verklemmen' indem sie auf das Freigeben bestimmter Ressourcen warten, die vom anderen zu diesem Zeitpunkt benutzt werden.",
+            "example": "Ein kleines Beispiel: Wir sind auf einem Parkplatz. Ein Auto steht auf einem Parkplatz und m\u00F6chte r\u00FCckw\u00E4rts aus der Parkl\u00FCcke fahren. Hinter ihm steht jedoch schon ein weiteres Auto, dass in den dort freiwerdenden Parkplatz einfahren m\u00F6chte. Also blockiert das wartende Auto das ausparkende Auto und das ausparkende Auto das Wartende.",
             "outro": "Gibt's nich"
         },
         {
             "title": "Was ist ein Livelock?",
             "identifier": "lifelock",
-            "intro": "\u00C4hnlich wie beim Deadlock kommen wir nicht mehr zu unserem eigentlichen Ziel. Jedoch wird beim Livelock nicht in der 'Warteposititon' verharrt, sondern es findet ein st\u00E4tiges wechseln der Zust\u00E4nde statt. ",
-            "main": "Jip's auch nisch",
+            "main": "\u00C4hnlich wie beim Deadlock kommen wir nicht mehr zu unserem eigentlichen Ziel. Jedoch wird beim Livelock nicht in der 'Warteposititon' verharrt, sondern es findet ein st\u00E4tiges wechseln der Zust\u00E4nde statt. ",
+            "example": "Jip's auch nisch",
             "outro": "Nope"
         },
         {
             "title": "Was ist eine Race Condititon?",
             "identifier": "race_condition",
-            "intro": "Eine Race Condititon entsteht, wenn zwei oder mehr Threads von zeitlichen ablaufen gegenseitig abh\u00E4ngig sind. Die Threads laufen ja nicht praktisch 100% parallel, sondern ihnen werden \u00FCber verschiedene Schedular bestimmte Rechenzeitr\u00E4ume zugeteilt. Nun kann es sein, dass aber unser Thread1, der auf das Ergebnis von Thread2 angewiesen ist, zwei mal hintereinander zugeteilt wird, Thread2 dagegen noch nicht weiter laufen konnte. So kann es leicht zu Fehlern kommen.",
-            "main": "Wenn du ein Wettrennen gegen deine Mudda machst und sie an Start und Ziel gleichzeitig ist",
+            "main": "Eine Race Condititon entsteht, wenn zwei oder mehr Threads von zeitlichen ablaufen gegenseitig abh\u00E4ngig sind. Die Threads laufen ja nicht praktisch 100% parallel, sondern ihnen werden \u00FCber verschiedene Schedular bestimmte Rechenzeitr\u00E4ume zugeteilt. Nun kann es sein, dass aber unser Thread1, der auf das Ergebnis von Thread2 angewiesen ist, zwei mal hintereinander zugeteilt wird, Thread2 dagegen noch nicht weiter laufen konnte. So kann es leicht zu Fehlern kommen.",
+            "example": "Wenn du ein Wettrennen gegen deine Mudda machst und sie an Start und Ziel gleichzeitig ist",
             "outro": "Nope"
         },
         {
             "title": "Was ist Synchronisation",
             "identifier": "synchronization",
-            "intro": "Synchronisation ist sozusagen die L\u00F6sung der Race Condition. Es ist Teil des zuvor schon angesprochenen Schedulars, nur dass die Synchronisation die Abh\u00E4ngigkeiten der verschiedene Prozesse voneinander beachtet um die effizienteste Zuteilung zu erm\u00F6glichen.",
-            "main": "",
+            "main": "Synchronisation ist sozusagen die L\u00F6sung der Race Condition. Es ist Teil des zuvor schon angesprochenen Schedulars, nur dass die Synchronisation die Abh\u00E4ngigkeiten der verschiedene Prozesse voneinander beachtet um die effizienteste Zuteilung zu erm\u00F6glichen.",
+            "example": "",
             "outro": ""
+        },
+        {
+          "title": "Was ist das Raucherproblem",
+          "identifier": "smokers_problem",
+          "main": "Das Raucherproblem beschriebt die Schwierigkeit der richtigen Verteilung der Ressourcen zwischen den verscheidenen Prozessen.",
+          "example": "Hier ein Beispiel: Wir haben 3 Raucher in einem Raum und es gibt nur einen Tisch. Jeder Raucher kann nur, wenn er an diesem Tisch sitzt seine Zigarette drehen und rauchen. Raucher 1 hat unbegrenzt Tabak, Raucher 2 unbegrenzt Papier und Raucher 3 unbegrenzt Feuer. Der H\u00C4ndler hat von allem immer nur begrenzte Mengen und bekommt in unregelm\u00C4ßigen Abst\u00C4nden Nachschub. Er legt jedoch immer nur 2 Zutaten auf den Tisch. Wenn f\u00FCr einen Raucher durch die Zugabe des H\u00C4ndlers alle Teile vorhanden sind, setzt er sich an den Tisch und raucht so lange, bis eine Ressource aufgebraucht ist. Es kann jedoch immer nur ein Raucher am Tisch sitzen. Wenn der H\u00C4ndler nun also ein Feuerzeug und Papier hinlegt, kann der Raucher, der unbegrenzt Tabak hat, sich an den Tisch setzen und so lange Rauchen bis ihm entweder das Papier ausgeht oder das Feuerzeug leer ist. Auch wenn der H\u00C4ndler zwischendurch wieder ein bisschen Tabak bekommen hat, den ein anderer Rauchen ben\u00F6tigen w\u00FCrde, kann dieser nicht mit dem Rauchen beginnen, da der Tisch noch belegt ist, bis die Zigarette des ersten Rauchers aufgebraucht ist.",
+          "outro": "Es geht hier also um das Problem des Wartens auf einen Prozess, damit andere Prozesse auch an die Reihe kommen k\u00F6nnen."
+        },
+        {
+          "title": "Was ist das Philosophenproblem?",
+          "identifier": "philosophers_problem",
+          "main": "Das Problem beschreibt die Schwierigkeit der Verteilung der Rechenzeiten, sodass jeder Prozess auch in einer angemessenen Zeit eingeteilt wird.",
+          "example": "Gehen wir davon aus, es s\u00C4ßen 5 Philosophen um einen Runden Tisch herum. Jeder hat einen Teller mti Essen vor sich. Dabei ben\u00F6tigen jeder von ihnen zum Essen 2 St\u00C4bchen. Jeder von ihnen hat jedoch nur ein St\u00C4bchen bekommen. Wenn jemand essen will, dann darf er sich nur das St\u00C4bchen links und das St\u00C4bchen rechts von ihm nehmen. Wenn ein Philosoph hungrig wird, nimmt er sich die St\u00C4bchen und f\u00C4ngt an zu essen, sobald er fertig ist, legt er sie wieder zur\u00FCck. Wenn immer nur einzelne Philosophen essen, dann funktioniert das System gut. Wenn jedoch alle gleichzeitig essen wollen kann die Situation entsehen, dass ein Philosoph an kein St\u00C4bchen mehr herankommt und auch nie an eins herankommen wird, da die St\u00C4bchen immer zwischen den anderen hin und her gegeben werden. Er muss also verhungern.",
+          "outro": "Jeder Philosoph ist in Wirklichkeit ein Prozess und wenn er verhungert, dann kommt er nicht zu seiner Rechenzeit und kann seine Aufgabe somit niemals erf\u00FCllen."
         }
     ]
 }

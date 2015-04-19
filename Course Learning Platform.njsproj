@@ -16,13 +16,14 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
-    <Content Include="data\modules\course\parallel_programming\data\practice.json" />
+    <Content Include="data\modules\course\parallel_programming\data\content.json" />
+    <Content Include="data\modules\course\parallel_programming\data\content\de\general.json" />
+    <Content Include="data\modules\course\parallel_programming\data\content\de\implementation.json" />
+    <Content Include="data\modules\course\parallel_programming\data\content\de\scenarios.json" />
+    <Content Include="data\modules\course\parallel_programming\data\content\de\usecases.json" />
     <Content Include="data\modules\course\parallel_programming\data\content\sources\Clone.java" />
-    <Content Include="data\modules\course\parallel_programming\data\content\en\general.json" />
-    <Content Include="data\modules\course\parallel_programming\data\content\en\implementation.json" />
-    <Content Include="data\modules\course\parallel_programming\data\content\en\scenarios.json" />
-    <Content Include="data\modules\course\parallel_programming\data\content\en\usecases.json" />
     <Content Include="data\modules\course\parallel_programming\data\content\sources\Ui.java" />
+    <Content Include="data\modules\course\parallel_programming\data\practice.json" />
     <Content Include="data\modules\course\parallel_programming\views\practice.dust" />
     <Content Include="data\modules\course\parallel_programming\views\results.dust" />
     <Content Include="package.json" />
@@ -52,7 +53,6 @@
     <Content Include="data\error\500.json" />
     <Content Include="data\sites\about.json" />
     <Content Include="data\sites\alreadyLoggedIn.json" />
-    <Content Include="data\sites\contact.json" />
     <Content Include="data\sites\credits.json" />
     <Content Include="data\sites\home.json" />
     <Content Include="data\sites\login.json" />
@@ -63,13 +63,8 @@
     <Content Include="data\modules\user\view.json" />
     <Content Include="data\modules\course\parallel_programming\course.json" />
     <Compile Include="data\modules\course\parallel_programming\parallel_programming.js" />
-    <Content Include="data\modules\course\parallel_programming\data\content.json" />
     <Compile Include="data\modules\course\parallel_programming\lib\content.js" />
     <Content Include="data\modules\course\parallel_programming\views\overview.dust" />
-    <Content Include="data\modules\course\parallel_programming\data\content\de\general.json" />
-    <Content Include="data\modules\course\parallel_programming\data\content\de\implementation.json" />
-    <Content Include="data\modules\course\parallel_programming\data\content\de\scenarios.json" />
-    <Content Include="data\modules\course\parallel_programming\data\content\de\usecases.json" />
     <Content Include="data\modules\course\parallel_programming\views\content\general.dust" />
     <Content Include="data\modules\course\parallel_programming\views\content\implementation.dust" />
     <Content Include="data\modules\course\parallel_programming\views\content\scenarios.dust" />
@@ -158,10 +153,9 @@
     <Folder Include="data\modules" />
     <Folder Include="data\modules\course" />
     <Folder Include="data\modules\course\parallel_programming" />
-    <Folder Include="data\modules\course\parallel_programming\data" />
-    <Folder Include="data\modules\course\parallel_programming\data\content" />
+    <Folder Include="data\modules\course\parallel_programming\data\" />
+    <Folder Include="data\modules\course\parallel_programming\data\content\" />
     <Folder Include="data\modules\course\parallel_programming\data\content\de\" />
-    <Folder Include="data\modules\course\parallel_programming\data\content\en\" />
     <Folder Include="data\modules\course\parallel_programming\data\content\sources\" />
     <Folder Include="data\modules\course\parallel_programming\lib" />
     <Folder Include="data\modules\course\parallel_programming\views" />

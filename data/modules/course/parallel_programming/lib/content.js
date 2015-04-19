@@ -57,7 +57,7 @@ var basicDataCached = {};
 
 var breadcrumbStuff = [
     { tail:false, link: "/course", caption: "Courses" },
-    { tail:false, link: "/course/parallel_programming/view", caption: "Overview"}
+    { tail:false, link: "/course/parallel_programming/overview", caption: "Overview"}
 ];
 
 var breadcrumbs = {
@@ -89,7 +89,7 @@ router.all('/scenarios', function(req, res) {
 });
 
 router.all('/implementation', function(req, res) {
-	var d = utils.merge(utils.merge(basicDataCached, sitesData.implementation), implementation);
+	var d = utils.merge(utils.merge(basicDataCached, sitesData.implementation), breadcrumbs.implementation);
 	data.wrapAndRender('content/implementation.dust', d, req, res, renderInfo);
 });
 

@@ -36,7 +36,7 @@ var availablePaths = function() {
 		'usecases': content + 'usecases',
 		'scenarios': content + 'scenarios',
 		'implementation': content + 'implementation',
-		'finalTest': '/practice'
+		'practice': thisCourse.mountpath + '/practice'
 	};
 }
 var basicData = function() {

@@ -25,9 +25,9 @@ router.all('/about', function(req, res) {
 	data.wrapAndRender('about.dust', data.getSiteData("About"), req, res);
 });
 
-router.all('/contact', function(req, res) {
+/*router.all('/contact', function(req, res) {
 	data.wrapAndRender('contact.dust', data.getSiteData("Contact"), req, res);
-});
+});*/
 
 router.all('/credits', function(req, res) {
 	data.wrapAndRender('credits.dust', data.getSiteData("Credits"), req, res);

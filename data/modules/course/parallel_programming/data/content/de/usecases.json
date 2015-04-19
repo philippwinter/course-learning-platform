@@ -1,7 +1,7 @@
 {
     "title": "Anwendung",
     "intro": "Wo wird das eingesetzt?",
-    "main": "Der Begriff 'Multi-Core' ist dir bestimmt schonmal zu Ohren gekommen. Wenn wir nur einen einzelnen Prozess h\u00E4tte, w\u00E4ren diese v\u00F6llig sinnlos.",
-    "example": "Ein Beispiel: Wir haben mehrere NPCs in einem Spiel und wollen, dass sie sich alle simultan bewegen k\u00F6nnen. Alleine das wir uns gleichzeitig mit den NPCs bewegen k\u00F6nnen, muss mit Threads realisiert werden.",
+    "main": "Der Begriff 'Multi-Core' ist dir bestimmt schonmal zu Ohren gekommen. Wenn wir nur einen einzelnen Prozess h\u00E4tte, w\u00E4ren diese v\u00F6llig sinnlos. Wenn wir ein bisschen abstrakter an dieses Thema herangehen, dann könnte man auch von Multitasking sprechen. Dank Multicore Prozessoren oder der Möglichkeit virtuelle Kerne zu erstellen, erhalten wir die Fähigkeit mit mehreren quasi-parallelen Prozessen zu arbeiten.",
+    "example": "Ein Beispiel: Wir haben mehrere NPCs in einem Spiel und wollen, dass sie sich alle simultan bewegen k\u00F6nnen. Alleine das wir uns gleichzeitig mit den NPCs bewegen k\u00F6nnen, muss mit Threads realisiert werden. \nUm ein dir noch ein bisschen näher zu bringen gehen wir einfach von der momentanen Situation aus. Du sitzt vor einem Gerät, auf dem in dieser Sekunde viele Prozesse parallel laufen. Alleine, dass du diese Seite angezeigt bekommst und nebenbei noch deine Maus bewegen kannst erfordert eine Vielzahl an Prozessen, die auch möglichst Parallel laufen sollen. Ein und Ausgabe sind ja zur selben Zeit möglich, wie wenn du die Seite scrollst.",
     "outro": "Also wann auch immer wir wollen, dass etwas gleichzeitig (nebenl\u00E4ufig) passieren soll, haben wir es mit nebenl\u00E4ufiger Programmierung zu tun."
 }

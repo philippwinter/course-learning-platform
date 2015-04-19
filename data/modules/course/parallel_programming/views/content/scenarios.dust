@@ -19,9 +19,9 @@
             <div class="example" id="{identifier}">
                 <h2>{title}</h2>
 
-                <p class="lead">{intro}</p>
-
                 <p class="main">{main}</p>
+
+                <p class="example-text">{example}</p>
 
                 <p class="outro">{outro}</p>
             </div>
